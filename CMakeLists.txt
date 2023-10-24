@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 if (CONFIG_MCUX_COMPONENT_middleware.littlefs)
     mcux_add_include(
-	    INCLUDES .
+        INCLUDES .
     )
 
     mcux_add_source(
@@ -13,14 +13,14 @@ if (CONFIG_MCUX_COMPONENT_middleware.littlefs)
                 lfs_util.h
     )
 endif()
+
 if (CONFIG_MCUX_COMPONENT_middleware.littlefs_mflash)
     mcux_add_include(
-        INCLUDES example/littlefs_shell
-        BASE_PATH ${SdkRootDirPath}/middleware/littlefs
-	)
+        INCLUDES mflash
+    )
+
     mcux_add_source(
-        SOURCES example/littlefs_shell/lfs_mflash.c
-                example/littlefs_shell/lfs_mflash.h
-        BASE_PATH ${SdkRootDirPath}/middleware/littlefs
+        SOURCES mflash/lfs_mflash.c
+                mflash/lfs_mflash.h
     )
 endif()

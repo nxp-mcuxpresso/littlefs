@@ -1,0 +1,11 @@
+NXP Software Content Register
+
+Package:                   littlefs.git
+Version:                   2.9.1
+Outgoing License:          BSD-3-Clause
+License File:              LICENSE.md
+Type of Content:           source code
+Description and comments:  A little fail-safe filesystem designed for microcontrollers.
+Release Location:          https://github.com/nxp-mcuxpresso/littlefs
+Origin:                    NXP (BSD-3-clause)
+                           Christopher Haster littlefs project (BSD-3-clause) - https://github.com/littlefs-project/littlefs
