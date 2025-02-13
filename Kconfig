@@ -7,7 +7,6 @@ menuconfig MCUX_COMPONENT_middleware.littlefs
     default n
     help
         This option will enable LittleFS Middleware component
-    select MCUX_COMPONENT_middleware.littlefs_mflash
 
 if MCUX_COMPONENT_middleware.littlefs
     config MCUX_COMPONENT_middleware.littlefs_mflash
