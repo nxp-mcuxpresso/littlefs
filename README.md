@@ -1,3 +1,26 @@
+# MCUXpresso SDK : mcuxsdk-middleware-littlefs
+
+## Overview
+This repository is for MCUXpresso SDK littlefs middleware delivery and it contains the components officially provided in NXP MCUXpresso SDK. This repository is part of the MCUXpresso SDK overall delivery which is composed of several sub-repositories/projects. Navigate to the top/parent repository (mcuxsdk-manifests) for the complete delivery of MCUXpresso SDK.
+
+## Documentation
+Overall details can be reviewed here: [MCUXpresso SDK Online Documentation](https://mcuxpresso.nxp.com/mcuxsdk/latest/html/introduction/README.html)
+
+Visit [Littlefs - Documentation](https://mcuxpresso.nxp.com/mcuxsdk/latest/html/middleware/littlefs/index.html) to review details on the contents in this sub-repo.
+
+## Setup
+Instructions on how to install the MCUXpresso SDK provided from GitHub via west manifest [Getting Started with SDK - Detailed Installation Instructions](https://mcuxpresso.nxp.com/mcuxsdk/latest/html/gsd/installation.html#installation)
+
+## Contribution
+Contributions are not currently accepted. Guidelines to contribute will be posted in the future.
+
+---------------------------------
+## Repo Specific Content
+This is MCUXpresso SDK fork of littlefs project
+https://github.com/littlefs-project/littlefs.
+
+MCUXpresso version is extending original content by mflash porting layer.
+
 ## littlefs
 
 A little fail-safe filesystem designed for microcontrollers.
@@ -221,12 +244,12 @@ License Identifiers that are here available: http://spdx.org/licenses/
 - [littlefs-js] - A javascript wrapper for littlefs. I'm not sure why you would
   want this, but it is handy for demos.  You can see it in action
   [here][littlefs-js-demo].
-  
+
 - [littlefs-python] - A Python wrapper for littlefs. The project allows you
   to create images of the filesystem on your PC. Check if littlefs will fit
   your needs, create images for a later download to the target memory or
   inspect the content of a binary image of the target memory.
-  
+
 - [littlefs2-rust] - A Rust wrapper for littlefs. This project allows you
   to use littlefs in a Rust-friendly API, reaping the benefits of Rust's memory
   safety and other guarantees.
@@ -258,7 +281,7 @@ License Identifiers that are here available: http://spdx.org/licenses/
   use with the MirageOS library operating system project. It is interoperable
   with the reference implementation, with some caveats.
 
-- [nim-littlefs] - A Nim wrapper and API for littlefs. Includes a fuse 
+- [nim-littlefs] - A Nim wrapper and API for littlefs. Includes a fuse
   implementation based on [littlefs-fuse]
 
 [BSD-3-Clause]: https://spdx.org/licenses/BSD-3-Clause.html
