@@ -1,4 +1,4 @@
-# Copyright 2024-2025 NXP
+# Copyright 2024-2026 NXP
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
@@ -18,4 +18,100 @@ if MCUX_COMPONENT_middleware.littlefs
             - MCUX_COMPONENT_component.mflash_onchip
             - MCUX_COMPONENT_component.mflash_offchip
             - MCUX_COMPONENT_component.mflash_onchip_fmu
+
+    config LITTLEFS_START_ADDR
+        hex "LITTLEFS_START_ADDR"
+        default 0x2000000
+        help
+            No prefix in generated macro
+
+    config LITTLEFS_LOOKAHEAD_SIZE
+        int "LITTLEFS_LOOKAHEAD_SIZE"
+        default 16
+        help
+            No prefix in generated macro
+
+    config LITTLEFS_READ_SIZE
+        int "LITTLEFS_READ_SIZE"
+        default 16
+        help
+            No prefix in generated macro
+
+    config LITTLEFS_PROG_SIZE
+        int "LITTLEFS_PROG_SIZE"
+        default 256
+        help
+            No prefix in generated macro
+
+    config LITTLEFS_BLOCK_SIZE
+        int "LITTLEFS_BLOCK_SIZE"
+        default 4096
+        help
+            No prefix in generated macro
+
+    config LITTLEFS_BLOCK_COUNT
+        int "LITTLEFS_BLOCK_COUNT"
+        default 128
+        help
+            No prefix in generated macro
+
+    config LITTLEFS_BLOCK_CYCLES
+        int "LITTLEFS_BLOCK_CYCLES"
+        default 100
+        help
+            No prefix in generated macro
+
+    config LITTLEFS_CACHE_SIZE
+        int "LITTLEFS_CACHE_SIZE"
+        default 256
+        help
+            No prefix in generated macro
+
+    config LFS_FREE
+        bool "LFS_FREE"
+        default n
+        help
+            No prefix in generated macro
+
+    config LFS_MALLOC
+        bool "LFS_MALLOC"
+        default n
+        help
+            No prefix in generated macro
+
+    config LFS_NO_DEBUG
+        bool "LFS_NO_DEBUG"
+        default n
+        help
+            No prefix in generated macro
+
+    config LFS_NO_ERROR
+        bool "LFS_NO_ERROR"
+        default n
+        help
+            No prefix in generated macro
+
+    config LFS_NO_INTRINSICS
+        bool "LFS_NO_INTRINSICS"
+        default n
+        help
+            No prefix in generated macro
+
+    config LFS_NO_MALLOC
+        bool "LFS_NO_MALLOC"
+        default n
+        help
+            No prefix in generated macro
+
+    config LFS_NO_WARN
+        bool "LFS_NO_WARN"
+        default n
+        help
+            No prefix in generated macro
+
+    config LFS_YES_TRACE
+        bool "LFS_YES_TRACE"
+        default n
+        help
+            No prefix in generated macro
 endif
