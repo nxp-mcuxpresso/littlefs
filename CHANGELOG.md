@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
+## [2.11.2_rev0]
+- littlefs updated to version 2.11.2
+
 ## [2.9.1_rev0]
 - littlefs updated to version 2.9.1
 - move porting layer mflash to "mflash" folder
