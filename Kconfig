@@ -18,7 +18,10 @@ if MCUX_COMPONENT_middleware.littlefs
             - MCUX_COMPONENT_component.mflash_onchip
             - MCUX_COMPONENT_component.mflash_offchip
             - MCUX_COMPONENT_component.mflash_onchip_fmu
+endif
 
+
+if MCUX_COMPONENT_middleware.littlefs_mflash
     config LITTLEFS_START_ADDR
         hex "LITTLEFS_START_ADDR"
         default 0x2000000
