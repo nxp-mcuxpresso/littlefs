@@ -42,6 +42,7 @@ int lfs_mflash_read(const struct lfs_config *lfsc, lfs_block_t block, lfs_off_t 
     ctx = (struct lfs_mflash_ctx *)lfsc->context;
     assert(ctx);
 
+    assert(UINT32_MAX - ctx->start_addr >= (uint32_t)block * lfsc->block_size + off);
     flash_addr = ctx->start_addr + block * lfsc->block_size + off;
 
     if (mflash_drv_read(flash_addr, buffer, size) != kStatus_Success)
@@ -61,12 +62,14 @@ int lfs_mflash_prog(
     ctx = (struct lfs_mflash_ctx *)lfsc->context;
     assert(ctx);
 
+    assert(UINT32_MAX - ctx->start_addr >= (uint32_t)block * lfsc->block_size + off);
     flash_addr = ctx->start_addr + block * lfsc->block_size + off;
 
     assert(mflash_drv_is_page_aligned(size));
 
     for (uint32_t page_ofs = 0; page_ofs < size; page_ofs += MFLASH_PAGE_SIZE)
     {
+        assert(UINT32_MAX - flash_addr >= page_ofs);
         status = mflash_drv_page_program(flash_addr + page_ofs, (void *)((uintptr_t)buffer + page_ofs));
         if (status != kStatus_Success)
             break;
@@ -88,10 +91,12 @@ int lfs_mflash_erase(const struct lfs_config *lfsc, lfs_block_t block)
     ctx = (struct lfs_mflash_ctx *)lfsc->context;
     assert(ctx);
 
+    assert(UINT32_MAX - ctx->start_addr >= (uint32_t)block * lfsc->block_size);
     flash_addr = ctx->start_addr + block * lfsc->block_size;
 
     for (uint32_t sector_ofs = 0; sector_ofs < lfsc->block_size; sector_ofs += MFLASH_SECTOR_SIZE)
     {
+        assert(UINT32_MAX - flash_addr >= sector_ofs);
         status = mflash_drv_sector_erase(flash_addr + sector_ofs);
         if (status != kStatus_Success)
             break;
